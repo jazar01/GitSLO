@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace SenderListOptimizer
@@ -21,7 +19,7 @@ namespace SenderListOptimizer
         /// Constructor for SenderList
         /// </summary>
         /// <param name="senderfilepath">File path to the file containing the senders email addresses</param>
-        /// <param name="publicdomainfilepath">File path to the file containing know public email domains</param>
+        /// <param name="publicdomainfilepath">File path to the file containing known public email domains</param>
         public SendersList(string senderfilepath, string publicdomainfilepath)
         {
             filePath = senderfilepath;
@@ -61,10 +59,7 @@ namespace SenderListOptimizer
         {
             foreach (sender s in Senders)
                 Console.WriteLine("-->LOCAL: " + s.local + "\t DOMAIN:" + s.domain + "\t Public:" + s.publicd.ToString());
-
-        
         }
-
     }
 
     /// <summary>
