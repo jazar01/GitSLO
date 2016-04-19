@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SenderListOptimizer
 {
+
+    /// <summary>
+    /// program class is used for unit testing from the console
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -34,6 +34,10 @@ namespace SenderListOptimizer
 
         }
 
+        /// <summary>
+        /// Simplified consloe writer
+        /// </summary>
+        /// <param name="str"></param>
         private static void write(string str)
         {
             Console.WriteLine(str);
