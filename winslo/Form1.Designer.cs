@@ -39,6 +39,11 @@
             this.btnSelectSafeSendersFile = new System.Windows.Forms.Button();
             this.txtBlockedSendersList = new System.Windows.Forms.TextBox();
             this.txtSafeSendersList = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnGo = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +62,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1142, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(883, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,15 +82,16 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnGo);
             this.panel1.Controls.Add(this.lblBlockedSendersList);
             this.panel1.Controls.Add(this.lblSafeSendersList);
             this.panel1.Controls.Add(this.btnSelectBlockedSendersFile);
             this.panel1.Controls.Add(this.btnSelectSafeSendersFile);
             this.panel1.Controls.Add(this.txtBlockedSendersList);
             this.panel1.Controls.Add(this.txtSafeSendersList);
-            this.panel1.Location = new System.Drawing.Point(12, 99);
+            this.panel1.Location = new System.Drawing.Point(12, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(851, 399);
+            this.panel1.Size = new System.Drawing.Size(852, 189);
             this.panel1.TabIndex = 1;
             // 
             // lblBlockedSendersList
@@ -141,11 +147,47 @@
             this.txtSafeSendersList.Size = new System.Drawing.Size(465, 26);
             this.txtSafeSendersList.TabIndex = 0;
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(12, 261);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(852, 459);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "EmailAddress";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Sender";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Domain";
+            // 
+            // btnGo
+            // 
+            this.btnGo.Location = new System.Drawing.Point(660, 145);
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(159, 29);
+            this.btnGo.TabIndex = 3;
+            this.btnGo.Text = "Go";
+            this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1142, 605);
+            this.ClientSize = new System.Drawing.Size(883, 769);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -173,5 +215,10 @@
         private System.Windows.Forms.Label lblBlockedSendersList;
         private System.Windows.Forms.Button btnSelectBlockedSendersFile;
         private System.Windows.Forms.TextBox txtBlockedSendersList;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Button btnGo;
     }
 }

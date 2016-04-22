@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SenderListOptimizer;
+
 
 namespace winslo
 {
@@ -41,6 +43,12 @@ namespace winslo
                 BlockedSendersFileName = openFileDialog1.FileName;
                 txtBlockedSendersList.Text = openFileDialog1.FileName;
             }
+        }
+
+        private void btnGo_click(object sender, EventArgs e)
+        {
+            SendersList sl = new SendersList(SafeSendersFileName, "");
+
         }
 
 
