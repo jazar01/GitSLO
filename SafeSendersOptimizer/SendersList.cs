@@ -8,12 +8,12 @@ namespace SenderListOptimizer
     /// <summary>
     /// Maintain and manage sender lists
     /// </summary>
-    class SendersList
+    public class SendersList
     {
         private string filePath;
         private string publicDomainFilePath;
 
-        public List<sender> Senders = new List<sender>();
+        private List<sender> Senders = new List<sender>();
 
         /// <summary>
         /// Constructor for SenderList
