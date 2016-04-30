@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGo = new System.Windows.Forms.Button();
             this.lblBlockedSendersList = new System.Windows.Forms.Label();
             this.lblSafeSendersList = new System.Windows.Forms.Label();
             this.btnSelectBlockedSendersFile = new System.Windows.Forms.Button();
@@ -43,9 +45,14 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnGo = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sendersListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sendersListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendersListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendersListBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -93,6 +100,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(852, 189);
             this.panel1.TabIndex = 1;
+            // 
+            // btnGo
+            // 
+            this.btnGo.Location = new System.Drawing.Point(660, 145);
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(159, 29);
+            this.btnGo.TabIndex = 3;
+            this.btnGo.Text = "Go";
+            this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_click);
             // 
             // lblBlockedSendersList
             // 
@@ -172,21 +189,33 @@
             // 
             this.columnHeader3.Text = "Domain";
             // 
-            // btnGo
+            // dataGridView1
             // 
-            this.btnGo.Location = new System.Drawing.Point(660, 145);
-            this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(159, 29);
-            this.btnGo.TabIndex = 3;
-            this.btnGo.Text = "Go";
-            this.btnGo.UseVisualStyleBackColor = true;
-            this.btnGo.Click += new System.EventHandler(this.btnGo_click);
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.sendersListBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(21, 282);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(813, 412);
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // sendersListBindingSource
+            // 
+            this.sendersListBindingSource.DataSource = typeof(SenderListOptimizer.SendersList);
+            // 
+            // sendersListBindingSource1
+            // 
+            this.sendersListBindingSource1.DataSource = typeof(SenderListOptimizer.SendersList);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 769);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -197,6 +226,9 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendersListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendersListBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +252,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button btnGo;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource sendersListBindingSource;
+        private System.Windows.Forms.BindingSource sendersListBindingSource1;
     }
 }
