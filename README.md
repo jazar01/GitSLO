@@ -1,7 +1,7 @@
 # GitSLO
 I am on the war path against spam.  This repository is my work space for spam fighting tools. 
 
-I have had the same work email address for 14 years.  It was posted on our company website for several years. \
+I have had the same work email address for 14 years.  It was posted on our company website for several years. 
 My job title and bio are on my company website and everyone that has something to sell to IT wants to spam me.
 I have been to numerous conferences and tradeshows.  I have purchased a lot of products and services.   
 
@@ -30,7 +30,7 @@ the entire company not just individuals.  On the flip side, if I get a spam emai
 invitation to a webinar, ..., from a company or domain that I don't give explicit permission; the entire domain is getting
 blocked.
 
-My yet-to-be name utility will allow me to review my whitelist and blacklist and quickly check off on whether to block
+My yet-to-be-named utility will allow me to review my whitelist and blacklist and quickly check off on whether to block
 or allow just the sender or the entire domain.  There will be some smarts to help quickly sort and optmize my lists,
 along with some helpful information to identify problems.  Such as entries that are both allowed and blocked, and other
 clues that an entry deserves attention.
