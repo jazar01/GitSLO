@@ -46,13 +46,14 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sendersListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sendersListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sendersListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sendersListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sendersListBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendersListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -89,6 +90,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnGo);
             this.panel1.Controls.Add(this.lblBlockedSendersList);
             this.panel1.Controls.Add(this.lblSafeSendersList);
@@ -103,7 +105,7 @@
             // 
             // btnGo
             // 
-            this.btnGo.Location = new System.Drawing.Point(660, 145);
+            this.btnGo.Location = new System.Drawing.Point(663, 145);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(159, 29);
             this.btnGo.TabIndex = 3;
@@ -202,13 +204,23 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // sendersListBindingSource1
+            // 
+            this.sendersListBindingSource1.DataSource = typeof(SenderListOptimizer.SendersList);
+            // 
             // sendersListBindingSource
             // 
             this.sendersListBindingSource.DataSource = typeof(SenderListOptimizer.SendersList);
             // 
-            // sendersListBindingSource1
+            // btnExit
             // 
-            this.sendersListBindingSource1.DataSource = typeof(SenderListOptimizer.SendersList);
+            this.btnExit.Location = new System.Drawing.Point(480, 145);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(159, 29);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form1
             // 
@@ -227,8 +239,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sendersListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sendersListBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sendersListBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +267,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource sendersListBindingSource;
         private System.Windows.Forms.BindingSource sendersListBindingSource1;
+        private System.Windows.Forms.Button btnExit;
     }
 }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System.ComponentModel;
+using SafeSendersOptimizer;
 
 namespace SenderListOptimizer
 {
@@ -13,7 +15,7 @@ namespace SenderListOptimizer
         private string filePath;
         private string publicDomainFilePath;
 
-        private List<sender> Senders = new List<sender>();
+        public SortableBindingList<sender> Senders = new SortableBindingList<sender>();
 
         /// <summary>
         /// Constructor for SenderList
@@ -47,7 +49,6 @@ namespace SenderListOptimizer
                     // no @ sign, the line is a domain
                     address[0] = string.Empty;
                     address[1] = line;  
-
                 }
                 Senders.Add(new sender(address[0], address[1], publicDomains.IsPublic(address[1])));
             }               
@@ -65,7 +66,7 @@ namespace SenderListOptimizer
     /// <summary>
     /// Sender
     /// </summary>
-    class sender
+    public class sender
     {
         public string local;
         public string domain;
@@ -75,6 +76,29 @@ namespace SenderListOptimizer
             local = localpart;
             domain = domainpart;
             publicd = publicdomain;
+        }
+
+        public string Email
+        {
+            get { return local +"@" + domain; }
+        }
+
+        public string Local
+        { 
+         get {return local; }
+         set { local = value; }
+        }
+
+        public string Domain
+        {
+            get { return domain; }
+            set { domain = value; }
+        }
+
+        public bool PublicD
+        {
+            get { return publicd; }                                 
+            set { publicd = value; }
         }
     }
 }
