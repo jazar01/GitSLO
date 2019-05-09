@@ -43,5 +43,9 @@ This project is primarly my workspace to solve my own problem and not necessaril
 spam killer.  But feel free to comment and ask questions.  NOTE this project does not have a complete and
 working deliverable yet.
 
+By the way if you want to get black listed by any of my email servers, then just send email to one of these email addresses:
+info@rhinoback.com or spammer@rhinoback.com or spammer@dataprobackup.com.  These are all honeypots so don't just send mail to them unless you really want to be blacklisted.
+
+
 
 
